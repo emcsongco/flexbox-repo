@@ -1,0 +1,41 @@
+* {
+    padding:0;
+    margin: 0;;
+}
+
+section {
+    background-color: lightgray;
+    width: 80%;
+    /* height: 700px; */
+    /* By not defining height, flexbox takes container's size by default */
+    height: 200px;
+
+    /* give 50px top / bottom and auto left/right sets it middle of page */
+    margin: 50px auto;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content:space-between;
+    align-items: center;
+}
+
+div {
+    background-color: red;
+    height: 100px;
+    width: 200px;
+}
+
+/* min-width: going from small to big screen */
+/* max-width: going from big to small screen */
+/* @media only screen and (max-width:800px) {
+    div {background-color: blue;
+    } */
+
+@media only screen and (max-width:1300px) {
+    section {
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+    }
+    div {background-color: blue;        
+    }
+}
